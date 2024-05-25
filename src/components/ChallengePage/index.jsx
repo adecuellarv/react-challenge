@@ -13,4 +13,4 @@ function ChallangePage() {
     )
 }
 
-export default ChallangePage
+export default ChallangePage;
