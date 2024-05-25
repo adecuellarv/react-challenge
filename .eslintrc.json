@@ -1,18 +1,23 @@
 {
-    "extends": ["airbnb", "airbnb/hooks"],
-    "env": {
-      "browser": true,
-      "es2021": true
+  "extends": ["airbnb", "airbnb/hooks"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": 12,
-      "sourceType": "module"
-    },
-    "rules": {
-      // Aquí puedes agregar o modificar reglas según tus preferencias
-    }
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"]
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
-  
+}
