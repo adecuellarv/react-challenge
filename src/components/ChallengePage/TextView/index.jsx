@@ -1,28 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getWord1, getWord2, getStatusBreakify } from "../../../store/reselect";
-import { periodicTable } from "../../../constants";
+import { getArrayWords } from "../../../functions";
 import "../styles.css";
 
 function TexView() {
     const word1 = useSelector(getWord1);
     const word2 = useSelector(getWord2);
     const isBreakify = useSelector(getStatusBreakify);
+    const [listWords1, setListWords1] = useState([]);
+    const [listWords2, setListWords2] = useState([]);
 
-    const lookForWor1 = () => {
-        periodicTable.map( i => {
-            const regex = new RegExp(i?.symbol.toLowerCase());
-            const resp =  regex.test(word1.toLowerCase());
-
-            console.log("#res", resp);
-        });
+    const lookForWord = () => {
+        const arrayWord1 = getArrayWords(word1);
+        setListWords1([...arrayWord1]);
+        const arrayWord2 = getArrayWords(word2);
+        setListWords2([...arrayWord2]);
     };
 
     useEffect(() => {
-        if(isBreakify){
-            lookForWor1();
+        if (isBreakify) {
+            lookForWord();
         }
-    },[isBreakify]);
+    }, [isBreakify]);
+
+    useEffect(() => {
+        if(listWords1?.length) console.log("#lus1", listWords1);
+    }, [listWords1]);
+
+    useEffect(() => {
+        if(listWords2?.length) console.log("#lus2", listWords2);
+    }, [listWords2]);
 
     return (
         <div className="flex flex-column div-textView">
