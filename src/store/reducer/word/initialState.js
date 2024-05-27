@@ -1,5 +1,6 @@
 const initialState = {
-    word: "",
+    word1: "",
+    word2: "",
 };
 
 export default initialState;
