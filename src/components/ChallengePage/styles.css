@@ -18,16 +18,32 @@
 }
 .div-inputs{
   gap: 20px;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   margin-top: 70px;
 }
 .div-inputs div{
   flex: 1;
+  text-align: left;
+}
+.div-button{
+  margin-top: 20px;
+}
+.label-inputs{
+  color: #fff;
 }
 input{
   padding: 7px;
   border-radius: 5px;
   border: 0px;
   width: 100%;
+  background: #b1b1b1;
+}
+button{
+  border: 0px;
+  background: #11472f;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { setWord1, setWord2 } from "../../../store/actions/word";
+import { setWord1, setWord2, setBreakify } from "../../../store/actions/word";
 import "../styles.css";
 
 function Inputs() {
@@ -8,29 +8,51 @@ function Inputs() {
     const [input1, setInput1] = useState("");
     const [input2, setInput2] = useState("");
 
+    const handleBreakify = () => {
+        if(input1 && input2){
+            dispatch(setBreakify(true));
+            setTimeout(() => {
+                dispatch(setBreakify(false));
+            }, 900);
+        } else {
+            alert("Escribe las palabras en los inputs");
+        }
+    };
+
     useEffect(() => {
-        if (input1?.length) dispatch(setWord1(input1));
+        dispatch(setWord1(input1));
     }, [input1]);
 
     useEffect(() => {
-        if (input2?.length) dispatch(setWord2(input2));
+        dispatch(setWord2(input2));
     }, [input2]);
 
     return (
-        <div className="flex flex-row div-inputs">
-            <div>
-                <input
-                    value={input1}
-                    onChange={(e) => setInput1(e.target.value)}
-                />
+        <>
+            <div className="flex flex-row div-inputs">
+                <div>
+                    <label className="label-inputs">First Name</label>
+                    <input
+                        value={input1}
+                        type="text"
+                        pattern="\S+"
+                        onChange={(e) => setInput1(e.target.value.replace(/\s+/g, ""))}
+                    />
+                </div>
+                <div>
+                    <label className="label-inputs">Second Name</label>
+                    <input
+                        value={input2}
+                        type="text"
+                        pattern="\S+"
+                        onChange={(e) => setInput2(e.target.value.replace(/\s+/g, ""))}
+                    />
+                </div>
             </div>
-            <div>
-                <input
-                    value={input2}
-                    onChange={(e) => setInput2(e.target.value)}
-                />
+            <div className="block div-button">
+                <button onClick={handleBreakify}>Breakify</button>
             </div>
-        </div>
+        </>
     );
 }
 

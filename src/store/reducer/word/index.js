@@ -2,7 +2,8 @@ import initialState from "./initialState";
 
 export const actionTypes = {
     SET_WORD1: "SET_WORD1",
-    SET_WORD2: "SET_WORD2"
+    SET_WORD2: "SET_WORD2",
+    BREAKIFY: "BREAKIFY"
 };
 
 const reducer = (
@@ -15,6 +16,9 @@ const reducer = (
     }
     case actionTypes.SET_WORD2: {
         return Object.assign({}, state, { word2: action.payload });
+    }
+    case actionTypes.BREAKIFY: {
+        return Object.assign({}, state, { breakify: action.payload });
     }
     default:
         return state;

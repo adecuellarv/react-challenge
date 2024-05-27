@@ -11,3 +11,9 @@ export const setWord2 = (word) => {
         dispatch({ type: actionTypes.SET_WORD2, payload: word });
     };
 };
+
+export const setBreakify = (status) => {
+    return async (dispatch) => {
+        dispatch({ type: actionTypes.BREAKIFY, payload: status });
+    };
+};

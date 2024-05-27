@@ -9,3 +9,8 @@ export const getWord2 = createSelector(
     state => state.viewChallange.word2,
     word2 => word2
 );
+
+export const getStatusBreakify = createSelector(
+    state => state.viewChallange.breakify,
+    breakify => breakify
+);
