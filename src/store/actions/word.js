@@ -4,4 +4,4 @@ export const setWord = (word) => {
     return async (dispatch) => {
         dispatch({ type: actionTypes.SET_WORD, payload: word });
     };
-}
+};

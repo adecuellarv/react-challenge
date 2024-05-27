@@ -8,9 +8,9 @@ function ChallangePage() {
     const word = useSelector(getWord);
     return (
         <div>
-            <button onClick={() => dispatch(setWord('ade'))}>Set word</button>
+            <button onClick={() => dispatch(setWord("ade"))}>Set word</button>
         </div>
-    )
+    );
 }
 
 export default ChallangePage;
