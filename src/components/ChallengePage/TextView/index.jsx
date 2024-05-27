@@ -8,7 +8,7 @@ function TexView() {
     const word2 = useSelector(getWord2);
 
     return (
-        <div className="flex flex-column">
+        <div className="flex flex-column div-textView">
             <h1>{word1}</h1>
             <h1>{word2}</h1>
         </div>

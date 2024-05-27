@@ -17,7 +17,7 @@ function Inputs() {
     }, [input2]);
 
     return (
-        <div className="">
+        <div className="flex flex-row div-inputs">
             <div>
                 <input
                     value={input1}

@@ -4,9 +4,13 @@ import Inputs from "./Inputs";
 
 function ChallangePage() {
     return (
-        <div>
-            <TexView />
-            <Inputs />
+        <div className="block div-form">
+            <div className="block">
+                <TexView />
+            </div>
+            <div className="block">
+                <Inputs />
+            </div>
         </div>
     );
 }

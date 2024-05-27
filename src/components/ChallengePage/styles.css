@@ -1,6 +1,33 @@
-.flex{
-  display: flex;
+.div-form{
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #000;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 40px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgb(196 196 196 / 75%);
+  -moz-box-shadow: 10px 10px 5px 0px rgb(196 196 196 / 75%);
+  box-shadow: 10px 10px 5px 0px rgb(196 196 196 / 75%);
+  
 }
-.flex-column{
-  flex-direction: column;
+.div-textView h1{
+  font-size: 92px;
+  line-height: 20px;
+  color: #fff;
+}
+.div-inputs{
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+.div-inputs div{
+  flex: 1;
+}
+input{
+  padding: 7px;
+  border-radius: 5px;
+  border: 0px;
+  width: 100%;
 }

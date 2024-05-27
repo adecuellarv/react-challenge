@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import App from "./components/ChallengePage";
 import reportWebVitals from "./reportWebVitals";
 import store from "./store/store";
+import "./styles.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
