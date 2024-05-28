@@ -52,3 +52,28 @@ button{
   padding: 13px;
   background: #11472f;
 }
+
+@media screen and (max-width: 992px) {
+  .div-form{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .div-inputs{
+    width: 100%;
+    display: block;
+  }
+  .div-form{
+    width: 85%;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .div-textView h1{
+    font-size: 40px;
+  }
+  .element-found{
+    padding: 7px;
+  }
+}

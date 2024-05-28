@@ -50,8 +50,12 @@ function TexView() {
 
     return (
         <div className="flex flex-column div-textView">
-            <h1 ref={ref1}>{word1}</h1>
-            <h1 ref={ref2}>{word2}</h1>
+            <h1 ref={ref1}>
+                {word1 ? word1 : <span style={{ opacity: .1 }}>Text here</span>}
+            </h1>
+            <h1 ref={ref2}>
+                {word2 ? word2 : <span style={{ opacity: .1 }}>Text here</span>}
+            </h1>
         </div>
     );
 }
