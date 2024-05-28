@@ -47,3 +47,8 @@ button{
   cursor: pointer;
   font-size: 18px;
 }
+
+.element-found{
+  padding: 13px;
+  background: #11472f;
+}
