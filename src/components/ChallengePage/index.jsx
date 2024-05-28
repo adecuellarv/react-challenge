@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from "react";
 import TexView from "./TextView";
 import Inputs from "./Inputs";

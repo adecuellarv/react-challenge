@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { periodicTable } from "../constants";
 
 export const getArrayWords = (word) => {

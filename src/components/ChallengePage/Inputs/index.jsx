@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";

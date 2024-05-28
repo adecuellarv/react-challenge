@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { getWord1, getWord2, getStatusBreakify } from "../../../store/reselect";

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { createSelector } from "reselect";
 
 export const getWord1 = createSelector(

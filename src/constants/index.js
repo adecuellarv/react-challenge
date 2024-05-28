@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 export const periodicTable = [
     { symbol: "H", name: "Hydrogen", atomicNumber: 1 },
     { symbol: "He", name: "Helium", atomicNumber: 2 },

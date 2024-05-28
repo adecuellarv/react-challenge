@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { actionTypes } from "../reducer/word";
 
 export const setWord1 = (word) => {
