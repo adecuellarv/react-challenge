@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { Toaster, toast } from "alert";
+import Swal from "sweetalert2";
 import { setWord1, setWord2, setBreakify } from "../../../store/actions/word";
 import "../styles.css";
 
@@ -16,7 +16,7 @@ function Inputs() {
                 dispatch(setBreakify(false));
             }, 900);
         } else {
-            toast("Escribe las palabras en los inputs");
+            Swal.fire("Escribe las palabras en los inputs");
         }
     };
 
@@ -53,7 +53,6 @@ function Inputs() {
             <div className="block div-button">
                 <button onClick={handleBreakify}>Breakify</button>
             </div>
-            <Toaster />
         </>
     );
 }
